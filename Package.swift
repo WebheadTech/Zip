@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Zip",
+    platforms: [.macOS(.v10_15), .iOS(.v13)],
     products: [
         .library(name: "Zip", targets: ["Zip"])
     ],
@@ -11,7 +12,7 @@ let package = Package(
         .target(
             name: "Minizip",
             dependencies: [],
-            path: "Zip/minizip",
+            path: "Sources/Zip/minizip",
             exclude: ["module"],
             linkerSettings: [
                 .linkedLibrary("z")
@@ -19,11 +20,11 @@ let package = Package(
         .target(
             name: "Zip",
             dependencies: ["Minizip"],
-            path: "Zip",
+            path: "Sources/Zip",
             exclude: ["minizip", "zlib"]),
         .testTarget(
             name: "ZipTests",
             dependencies: ["Zip"],
-            path: "ZipTests"),
+            path: "Sources/ZipTests"),
     ]
 )
