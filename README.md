@@ -57,8 +57,9 @@ Zip supports '.zip' and '.cbz' files out of the box. To support additional zip-d
 Zip.addCustomFileExtension("file-extension-here")
 ```
 
-### Setting up with [Swift Package Manager](https://swift.org/package-manager)
+## Setting up with [Swift Package Manager](https://swift.org/package-manager)
+
 To use Zip with Swift Package Manager, add it to your package's dependencies:
 ```swift
-.package(url: "https://github.com/marmelroy/Zip.git", .upToNextMinor(from: "2.1.1"))
+.package(url: "https://github.com/WebheadTech/Zip.git", .upToNextMajor(from: "2.1.1"))
 ```
